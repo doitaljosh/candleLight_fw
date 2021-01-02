@@ -170,18 +170,18 @@ THE SOFTWARE.
         // SILENT pin not connected
 
         #define LED1_GPIO_Port GPIOB
-        #define LED1_Pin GPIO_PIN_11     /* green */
-        #define LED1_Mode GPIO_MODE_OUTPUT_OD
+        #define LED1_Pin GPIO_PIN_10     /* RX LED */
+        #define LED1_Mode GPIO_MODE_OUTPUT_PP
         #define LED1_Active_High 1
 
         #define LED2_GPIO_Port GPIOB
-        #define LED2_Pin GPIO_PIN_10     /* red */
-        #define LED2_Mode GPIO_MODE_OUTPUT_OD
+        #define LED2_Pin GPIO_PIN_2     /* TX LED */
+        #define LED2_Mode GPIO_MODE_OUTPUT_PP
         #define LED2_Active_High 1
 
 	#define LED3_GPIO_Port GPIOB
-        #define LED3_Pin GPIO_PIN_2     /* red */
-        #define LED3_Mode GPIO_MODE_OUTPUT_OD
+        #define LED3_Pin GPIO_PIN_11     /* Link LED */
+        #define LED3_Mode GPIO_MODE_OUTPUT_PP
         #define LED3_Active_High 1
 
 #else
