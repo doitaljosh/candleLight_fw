@@ -40,6 +40,7 @@ THE SOFTWARE.
 #define BOARD_usb2can     4
 #define BOARD_canalyze     5
 #define BOARD_cannette    6
+#define BOARD_innomaker	7
 
 #if BOARD == BOARD_candleLight
 	#define USBD_PRODUCT_STRING_FS		(uint8_t*) "candleLight USB to CAN adapter"
@@ -160,6 +161,29 @@ THE SOFTWARE.
 
 	#define DCDCEN_Port GPIOC
 	#define DCDCEN_Pin GPIO_PIN_15		/* activate DCDC converter, active high */
+
+#elif BOARD == BOARD_innomaker
+	#define USBD_PRODUCT_STRING_FS		(uint8_t*) "USB2CAN (CandleLight FW)"
+	#define USBD_MANUFACTURER_STRING        (uint8_t*) "InnoMaker"
+        #define DFU_INTERFACE_STRING_FS         (uint8_t*) "USB2CAN firmware upgrade interface"
+
+        // SILENT pin not connected
+
+        #define LED1_GPIO_Port GPIOB
+        #define LED1_Pin GPIO_PIN_11     /* green */
+        #define LED1_Mode GPIO_MODE_OUTPUT_OD
+        #define LED1_Active_High 1
+
+        #define LED2_GPIO_Port GPIOB
+        #define LED2_Pin GPIO_PIN_10     /* red */
+        #define LED2_Mode GPIO_MODE_OUTPUT_OD
+        #define LED2_Active_High 1
+
+	#define LED3_GPIO_Port GPIOB
+        #define LED3_Pin GPIO_PIN_2     /* red */
+        #define LED3_Mode GPIO_MODE_OUTPUT_OD
+        #define LED3_Active_High 1
+
 #else
 	#error please define BOARD
 #endif
